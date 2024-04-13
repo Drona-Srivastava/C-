@@ -25,7 +25,7 @@ class SimpleCalculator_23BAI1314
             
         }
         else {
-            return 0; //x is zero
+            return 0;
         }
     }
 
@@ -40,7 +40,7 @@ class SimpleCalculator_23BAI1314
         }
 
         else{
-            return 0; //n is not positive
+            return 0; 
         }
     }
 
@@ -59,6 +59,7 @@ class CalculateSquare__23BAI1314: public SimpleCalculator_23BAI1314
         return sqr;
     }
 };
+
 
 // ------------------------------------------------------------------------------------------------------------------------------------------//
 
