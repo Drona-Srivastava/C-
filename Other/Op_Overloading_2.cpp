@@ -37,9 +37,11 @@ class Test{
 };
 
 int main(){
-    Test t;
-    ++t;
-    t.pf();
-    t++;
-    t.pf();
+    int t=0,y=0,z=0,a=0;
+    cout<<"First: "<<y<<endl;
+    y = ++t;
+    cout<<"Second: "<<y<<endl;
+    cout<<"Third: "<<z<<endl;
+    z = a++;
+    cout<<"Fourth: "<<z<<endl;
 }
