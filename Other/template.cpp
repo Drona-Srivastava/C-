@@ -20,6 +20,6 @@ T2 add(T1 a, T2 b){ //function can be given the data-type of whichever one want 
 }
 //template reduces excess functions for different data types with all variables being of same datatypes
 int main(){
-    cout<<add(2.3,3)<<endl;
-    cout<<add(2,3.3)<<endl;
+    cout<<add<float,int>(2.3,3)<<endl;
+    cout<<add<int,float>(2,3.3)<<endl;
 }
