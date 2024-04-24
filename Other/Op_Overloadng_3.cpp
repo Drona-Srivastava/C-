@@ -33,4 +33,28 @@ class Poly{
             this->b = b;
             this->c = c;
         }
+        Poly operator + (Poly num){
+            Poly temp;
+            temp.a = a + num.a;
+            temp.b = b + num.b;
+            temp.c = c + num.c;
+            return temp;
+        }
+        void printf(){
+            if(a>0 && b<0 && c>0){
+                cout<< a << "x^2 + " << b << "x + "<<c<<endl;
+            }
+        }
 };
+
+int main(){
+    Poly q1(1,2,3);
+    Poly q2(2,3,4);
+    q1.printf();
+    cout<<": q1 ";
+    q2.printf();
+    cout<<": q2 ";
+    Poly sum;
+    sum = q1+q2;
+    sum.printf();
+}
