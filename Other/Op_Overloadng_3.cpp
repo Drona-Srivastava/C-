@@ -41,8 +41,17 @@ class Poly{
             return temp;
         }
         void printf(){
-            if(a>0 && b<0 && c>0){
-                cout<< a << "x^2 + " << b << "x + "<<c<<endl;
+            if(a>0 & b>0 & c>0){
+                cout<<a<<"x^2+"<<b<<"x+"<<c<<endl;
+            }
+            else if(a<0 & b>0 & c>0){
+                cout<<"-"<<a<<"x^2+"<<b<<"x+"<<c<<endl; 
+            }
+            else if(a>0 & b<0 & c>0){
+                cout<<a<<"x^2-"<<b<<"x+"<<c<<endl;
+            }
+            else if(a>0 & b>0 & c<0){
+                cout<<a<<"x^2+"<<b<<"x-"<<c<<endl;
             }
         }
 };
@@ -50,11 +59,12 @@ class Poly{
 int main(){
     Poly q1(1,2,3);
     Poly q2(2,3,4);
+    cout<<"q1 : ";
     q1.printf();
-    cout<<": q1 ";
+    cout<<"q2 : ";
     q2.printf();
-    cout<<": q2 ";
     Poly sum;
     sum = q1+q2;
+    cout<<"sum : ";
     sum.printf();
 }
