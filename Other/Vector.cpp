@@ -1,41 +1,36 @@
+//Stadard Template Library
+// in normal array we can not add elements in middle of an array
+// also no simple way to delete any particular element
+// to avoid this we use linked list
+// it is like a chain
+// vector, lists, maps
 #include <iostream>
+#include <vector>
 using namespace std;
-
-class Vector{
-    public:
-        int size;
-        int*arr;
-        Vector(int size){
-            this->size = size;   
-            arr = new int[size]; // we have created an array here of size no of elements     
-        }
-        void display(){
-            for(int i=0; i<size;i++){
-                cout<<arr[i]<<endl;
-            }
-        }
-        int dotproduct(Vector &v){
-            int dp=0;
-            for(int i=0; i<size; i++){
-                dp = dp + (this->arr[i]*v.arr[i]);
-            }
-            return dp;
-        }
-};
-
+void display(vector<int> &v1){
+    cout<<"Vector elements are : ";
+    for(int i=0; i<3; i++){
+        cout<<v1[i]<<" ";
+    }
+    cout<<endl;
+}
 int main(){
-    Vector v1(3);
-    v1.arr[0] = 3;
-    v1.arr[1] = 4;
-    v1.arr[2] = 5;
-    v1.display();
-
-    Vector v2(3);
-    v2.arr[0] = 5;
-    v2.arr[1] = 6;
-    v2.arr[2] = 7;
-    v2.display();
-
-    int dp = v1.dotproduct(v2);
-    cout<<dp<<" is the dot product of v1 and v2"<<endl;
+    vector<int> v1; 
+    //vector<type> name create reference variable for vector
+    // size is dynamic unlike array
+    int num;
+    for(int i=0; i<3; i++){
+        cout<<"Enter the number : ";
+        cin>>num;
+        v1.push_back(num); // enters the num in the vector
+    }
+    display(v1);
+    v1.pop_back();
+    vector<int>:: iterator itr;//creating iterator
+    itr = v1.begin();//pointing iterator to particular place
+    //itr = v1.end();
+    //giving particular location
+    v1.insert(itr+2,3,41); // at 2nd location 0,1,2 middle number denotes the no. of times we want to add it
+    v1.insert(itr,38); // to insert values at random places needs an iterator
+    display(v1);
 }
