@@ -20,7 +20,7 @@ int main(){
     Baseclass *ptr;
     Derived obj_1;
     ptr = &obj_1; //Parent can point to the child !!
-    ptr -> display();  // this will not get us the derived class display()
+    ptr -> display();  // this will get us the derived class display()
     //this will get us the display fn of base clas !!
     //to access the display fn of derived we can mention the base class function as virtual
     // the statement would be
