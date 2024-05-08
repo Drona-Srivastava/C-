@@ -11,7 +11,7 @@ class Vector{
             arr = new T[size]; // we have created an array here of size no of elements     
         }
         void display(){
-            for(int i=0; i<size;i--){
+            for(int i=0; i<size;i++){
                 cout<<arr[i]<<endl;
             }
         }
